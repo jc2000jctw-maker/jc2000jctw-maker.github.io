@@ -16,6 +16,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://jc2000jctw-maker.github.io/media-kit.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://jc2000jctw-maker.github.io/sealpdf/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
