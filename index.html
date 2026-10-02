@@ -3,24 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Fill Light Color turns your iPhone screen into an adjustable selfie fill light for video calls, portraits, product close-ups, and soft screen lighting. 支援自拍補光、視訊補光、色溫調整、雙色補光與前鏡頭預覽。">
-  <meta name="keywords" content="fill light, selfie light, video light, screen light, iPhone fill light, soft light, color temperature, 補光燈, 自拍補光, 視訊補光, 手機補光燈, 螢幕燈, 色溫, 柔光, 商品拍攝補光">
+  <meta name="description" content="Fill Light Color 把 iPhone 螢幕變成自拍補光燈，調整亮度與冷暖色溫，支援前鏡頭預覽、雙色補光與常用設定收藏。免費下載，亦可用第二支手機替視訊鏡頭或商品近拍補光。">
   <meta name="robots" content="index,follow">
   <meta name="apple-itunes-app" content="app-id=6772977729">
   <meta name="theme-color" content="#12110f">
   <link rel="canonical" href="https://jc2000jctw-maker.github.io/">
-  <meta property="og:title" content="Fill Light Color - iPhone screen fill light">
-  <meta property="og:description" content="Use your iPhone screen as an adjustable soft light for selfies, video calls, portraits, and product close-ups.">
+  <link rel="alternate" hreflang="zh-Hant" href="https://jc2000jctw-maker.github.io/">
+  <link rel="alternate" hreflang="en" href="https://jc2000jctw-maker.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://jc2000jctw-maker.github.io/en/">
+  <meta property="og:title" content="Fill Light Color｜iPhone 自拍補光燈">
+  <meta property="og:description" content="用螢幕替自拍補光，調整冷暖色溫與亮度，搭配前鏡頭預覽、雙色光與常用設定收藏。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jc2000jctw-maker.github.io/">
   <meta property="og:site_name" content="Fill Light Color">
   <meta property="og:locale" content="zh_TW">
-  <meta property="og:image" content="https://jc2000jctw-maker.github.io/assets/fill-light-dual-red-yellow.png">
+  <meta property="og:image" content="https://jc2000jctw-maker.github.io/assets/store-selfie.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fill Light Color - iPhone screen fill light">
-  <meta name="twitter:description" content="Adjustable soft screen light for selfies, video calls, portraits, and product close-ups.">
-  <meta name="twitter:image" content="https://jc2000jctw-maker.github.io/assets/fill-light-dual-red-yellow.png">
-  <title>Fill Light Color - iPhone screen fill light</title>
+  <meta name="twitter:title" content="Fill Light Color｜iPhone 自拍補光燈">
+  <meta name="twitter:description" content="亮度與冷暖色溫可調的手機補光工具，支援雙色柔光與前鏡頭預覽。">
+  <meta name="twitter:image" content="https://jc2000jctw-maker.github.io/assets/store-selfie.jpg">
+  <title>Fill Light Color｜iPhone 自拍補光燈・雙色柔光</title>
   <style>
     :root {
       color-scheme: dark;
@@ -31,7 +33,7 @@
       --blue: #9fc2f8;
       --amber: #f0a323;
       --green: #88d6b0;
-      --page: #12110f;
+      --page: #151515;
     }
 
     * {
@@ -70,8 +72,8 @@
       position: absolute;
       inset: 0;
       z-index: -2;
-      background-image: url("assets/fill-light-dual-red-yellow.png");
-      background-position: center 42%;
+      background-image: url("assets/store-dual.jpg");
+      background-position: center 72%;
       background-size: cover;
     }
 
@@ -99,7 +101,7 @@
     h1 {
       margin: 0;
       max-width: 720px;
-      font-size: clamp(3rem, 9vw, 6.8rem);
+      font-size: 5.5rem;
       line-height: 0.95;
       letter-spacing: 0;
       text-wrap: balance;
@@ -110,7 +112,7 @@
       max-width: 660px;
       margin: 22px 0 0;
       color: #fff8ec;
-      font-size: clamp(1.15rem, 2vw, 1.55rem);
+      font-size: 1.4rem;
       text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
     }
 
@@ -155,7 +157,7 @@
 
     h2 {
       margin: 0 0 16px;
-      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-size: 2.5rem;
       line-height: 1.08;
       letter-spacing: 0;
     }
@@ -194,7 +196,7 @@
     }
 
     .showcase {
-      background: #f6f1e7;
+      background: #f5f5f5;
       color: #171717;
     }
 
@@ -208,6 +210,9 @@
       gap: 28px;
       align-items: start;
       margin-top: 34px;
+      max-width: 740px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     figure {
@@ -290,10 +295,20 @@
       text-underline-offset: 3px;
     }
 
+    .languages { display: flex; gap: 20px; justify-content: flex-end; position: relative; z-index: 1; }
+    .languages a { text-underline-offset: 4px; }
+    a:focus-visible { outline: 3px solid var(--green); outline-offset: 5px; }
+
     @media (max-width: 760px) {
       .hero {
         min-height: 82vh;
       }
+
+      .hero::before { background-size: auto 180%; background-position: 62% 90%; }
+
+      h1 { font-size: 3rem; line-height: 1.05; }
+      h2 { font-size: 2rem; }
+      .tagline { font-size: 1.15rem; }
 
       .feature-grid,
       .shots {
@@ -312,57 +327,26 @@
       "name": "Fill Light Color",
       "operatingSystem": "iOS",
       "applicationCategory": "UtilitiesApplication",
-      "description": "An iPhone screen fill light for selfies, video calls, portraits, and product close-ups with adjustable brightness, color temperature, dual-color light, favorites, and front camera preview.",
-      "downloadUrl": "https://apps.apple.com/us/app/fill-light-color/id6772977729",
+      "description": "iPhone 螢幕自拍補光工具，支援亮度與冷暖色溫調整、前鏡頭預覽、雙色補光與常用設定收藏。",
+      "downloadUrl": "https://apps.apple.com/tw/app/fill-light-color/id6772977729",
       "offers": {
         "@type": "Offer",
         "price": "0",
-        "priceCurrency": "USD"
+        "priceCurrency": "TWD"
       }
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How can I use an iPhone as a fill light?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Open Fill Light Color on a second iPhone, place it near the camera, then adjust screen brightness and color temperature until the subject is evenly lit."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can Fill Light Color help with video calls and product photos?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. The full-screen soft light can be used beside a webcam for video calls or near small products for close-up photography."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does the app support warm and cool light?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Fill Light Color supports adjustable cool, natural, warm, and red-warm tones, plus a dual-color light mode."
-          }
-        }
-      ]
     }
   </script>
 </head>
 <body>
   <header class="hero">
+    <nav class="languages" aria-label="語言"><span aria-current="page">繁體中文</span><a href="en/" lang="en">English</a></nav>
     <div class="hero-inner">
-      <p class="eyebrow">自拍補光 · 視訊柔光 · iPhone screen light</p>
+      <p class="eyebrow">iPhone 自拍補光燈</p>
       <h1>Fill Light Color</h1>
-      <p class="tagline">Turn your iPhone into a soft fill light with adjustable brightness, color temperature, dual-color light, saved favorites, and front camera preview.</p>
-      <div class="actions" aria-label="Primary actions">
-        <a class="button" href="https://apps.apple.com/us/app/fill-light-color/id6772977729">Download on the App Store</a>
-        <a class="button secondary" href="#features">View features</a>
+      <p class="tagline">讓螢幕替自拍補光。調整亮度與冷暖色溫，用前鏡頭預覽效果，再收藏喜歡的單色或雙色光線。</p>
+      <div class="actions" aria-label="下載與產品畫面">
+        <a class="button" href="https://apps.apple.com/tw/app/fill-light-color/id6772977729">App Store 免費下載</a>
+        <a class="button secondary" href="#screens">查看 App 畫面</a>
       </div>
     </div>
   </header>
@@ -371,24 +355,24 @@
     <section class="section" id="features">
       <div class="section-inner">
         <h2>一開啟就是補光燈</h2>
-        <p class="lead">Fill Light Color keeps the screen itself as the light source. Swipe to tune color temperature and brightness, preview your face with the front camera, and save useful lighting setups for the next shoot.</p>
+        <p class="lead">螢幕就是光源。左右滑動調整冷暖色溫，上下滑動調整亮度，一邊看前鏡頭預覽，一邊找到適合自己的光線。</p>
 
-        <div class="feature-grid" aria-label="Fill Light Color features">
+        <div class="feature-grid" aria-label="補光功能">
           <div class="feature">
-            <strong>Color temperature control</strong>
-            <p>Swipe through cool blue, natural white, warm yellow, and red-warm tones for different skin, desk, and product lighting needs.</p>
+            <strong>冷暖色溫與亮度</strong>
+            <p>從冷藍、自然白到暖黃、紅暖光，配合環境與膚色調整螢幕補光。</p>
           </div>
           <div class="feature">
-            <strong>Front camera preview</strong>
-            <p>Check the lighting effect while adjusting the screen, then hide the preview when you want a clean full-screen light.</p>
+            <strong>前鏡頭小窗預覽</strong>
+            <p>調光時即時查看上臉效果。需要完整補光面板時，可點一下隱藏預覽，重新開啟 App 後恢復。</p>
           </div>
           <div class="feature">
-            <strong>Dual-color and favorites</strong>
-            <p>Use a layered two-color light for richer mood, and long press to save brightness and color setups you use often.</p>
+            <strong>雙色補光與收藏</strong>
+            <p>切換單色或雙色光線，長按儲存常用補光設定，最多收藏 5 組。</p>
           </div>
         </div>
 
-        <ul class="use-cases" aria-label="Use cases">
+        <ul class="use-cases" aria-label="使用情境">
           <li>自拍補光</li>
           <li>視訊補光</li>
           <li>人像柔光</li>
@@ -398,19 +382,19 @@
       </div>
     </section>
 
-    <section class="section showcase" aria-label="Actual app screenshots">
+    <section class="section showcase" id="screens" aria-label="正式上架畫面">
       <div class="section-inner">
-        <h2>Actual app screens</h2>
-        <p class="lead">These screenshots show the current app interface in use: color presets, camera preview, brightness level, and the dual-color light mode.</p>
+        <h2>看看實際補光畫面</h2>
+        <p class="lead">以下為目前 App Store 1.0.1 的產品截圖，呈現前鏡頭預覽、色彩選擇與亮度控制。</p>
 
         <div class="shots">
           <figure class="shot">
-            <img src="assets/fill-light-camera-hint.png" alt="Fill Light Color cool blue screen light with front camera preview and gesture hint" width="1284" height="2778" loading="lazy">
-            <figcaption>Front camera preview with gesture guidance for brightness, color, favorites, and dual-color mode.</figcaption>
+            <img src="assets/store-selfie.jpg" alt="Fill Light Color 暖黃自拍補光畫面，包含前鏡頭預覽及亮度控制" width="1284" height="2778" loading="lazy">
+            <figcaption>暖黃補光與前鏡頭預覽。</figcaption>
           </figure>
           <figure class="shot">
-            <img src="assets/fill-light-dual-red-yellow.png" alt="Fill Light Color red yellow dual-color fill light mode with brightness control" width="1284" height="2778" loading="lazy">
-            <figcaption>Dual-color red and yellow fill light for a warmer portrait, video, or product lighting look.</figcaption>
+            <img src="assets/store-dual.jpg" alt="Fill Light Color 冷暖雙色補光畫面，包含前鏡頭預覽及亮度控制" width="1284" height="2778" loading="lazy">
+            <figcaption>雙色光線與亮度控制。</figcaption>
           </figure>
         </div>
       </div>
@@ -419,19 +403,19 @@
     <section class="section" aria-labelledby="faq-heading">
       <div class="section-inner">
         <h2 id="faq-heading">iPhone 補光常見問題</h2>
-        <p class="lead">No extra light panel is required. Fill Light Color is designed for quick, close-range lighting when another iPhone is already nearby.</p>
+        <p class="lead">適合近距離、臨時補光。螢幕亮度與距離會影響效果，不能取代大型專業燈具。</p>
         <div class="faq-list">
           <div class="faq-item">
             <h3>如何把 iPhone 當成自拍補光燈？</h3>
-            <p>在另一支 iPhone 開啟 Fill Light Color，把螢幕放在相機附近，再調整亮度與冷暖色溫，直到臉部陰影變得自然。</p>
+            <p>開啟 App，用前鏡頭小窗確認光線，調整亮度與色溫。也可用第二支 iPhone，把亮起的螢幕放在拍攝鏡頭旁作補光。</p>
           </div>
           <div class="faq-item">
             <h3>可以用於夜間視訊或直播嗎？</h3>
-            <p>可以。將手機放在視訊鏡頭旁作為近距離柔光，暖色適合膚色，冷色則適合偏白或更清晰的畫面風格。</p>
+            <p>可以用作外部光源：在另一支 iPhone 開啟 App，放在電腦或視訊裝置的鏡頭旁。不是讓同一支手機在背景持續顯示補光面板，也沒有內建視訊通話或直播功能。</p>
           </div>
           <div class="faq-item">
             <h3>可以替商品近拍補光嗎？</h3>
-            <p>適合飾品、模型、食品與桌面小物近拍。單色光可柔化陰影，雙色模式則可增加背景與輪廓的色彩層次。</p>
+            <p>可將手機螢幕靠近桌面小物，用另一部相機拍攝。調整距離、亮度及色溫，觀察陰影與反光的變化。</p>
           </div>
         </div>
       </div>
@@ -439,10 +423,10 @@
 
     <section class="section">
       <div class="section-inner">
-        <h2>Download Fill Light Color</h2>
-        <p class="lead">Use it as a quick selfie light, a small video-call light, or a compact soft light for close-up photos when you only have your iPhone nearby.</p>
+        <h2>下載 Fill Light Color</h2>
+        <p class="lead">從自拍補光開始，找到喜歡的光線，再收藏下次使用。免費下載，App 內包含廣告。</p>
         <div class="actions">
-          <a class="button" href="https://apps.apple.com/us/app/fill-light-color/id6772977729">Open App Store page</a>
+          <a class="button" href="https://apps.apple.com/tw/app/fill-light-color/id6772977729">前往 App Store</a>
         </div>
       </div>
     </section>
@@ -452,9 +436,9 @@
     <div class="footer-inner">
       <div>Fill Light Color by JC2000JCTW Maker</div>
       <div>
-        <a href="support.html">Support</a> ·
-        <a href="privacy-policy.html">Privacy Policy</a> ·
-        <a href="media-kit.html">Media Kit</a> ·
+        <a href="support.html">技術支援</a> ·
+        <a href="privacy-policy.html">隱私權政策</a> ·
+        <a href="media-kit.html">推廣圖片與文案</a> ·
         <a href="app-ads.txt">app-ads.txt</a> ·
         <a href="sealpdf/">SealPDF</a>
       </div>
